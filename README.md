@@ -44,14 +44,15 @@ The script can be run from the command line, using the following 3 command line 
   - **2 - db_name**: the name of the database that we will connect to
   - **3 - table_name**: the name of the table that we will create
 
+We assume that the Excel file will be in the same path as the script. Both the database file and the text file that the script creates, will also be created in the same path as the script.
 
   
 ## Performance  
 
-  The script runs in O(3) time. As an estimate we offer the following values:
+  The script runs in O(3) time. As an estimate, using 2 cores of a Ryzen 5 1600, we get the following values:
   
-  | rows  | seconds |
+| rows  | seconds |
 |-------|---------|
-| 192   | 1.8     |
 | 1536  | 11.71   |
 | 12288 | 100.62  |
+| 196608 | 1441.6 |
