@@ -45,7 +45,7 @@ The script can be run from the command line, using the following 3 command line 
 
 for example, to read the file **InputClosureTable.xlsx**, connect to the **niologic** database, and create a table called **CLOSURE_TABLE**, we will use the following command
 
-    python niologic-sqlite.py InputClosureTable.xlsx niologic CLOSURE_TABLE
+    python closure_tables.py InputClosureTable.xlsx niologic CLOSURE_TABLE
 
 We assume that the Excel file will be in the same path as the script. Both the database file and the text file that the script creates, will also be created in the same path as the script.
 
