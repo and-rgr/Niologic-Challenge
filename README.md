@@ -52,17 +52,15 @@ We assume that the Excel file will be in the same path as the script. Both the d
   
 ## Performance  
 
-  The script runs in O(3) time. As an estimate, using 2 cores of a Ryzen 5 1600, we get the following values:
+  The script runs in O(2) time. As an estimate, using 2 cores of a Ryzen 5 1600 CPU, we get the following values:
   
 | rows  | seconds |
 |-------|---------|
-| 1536  | 11.71   |
-| 12288 | 100.62  |
-| 196608 | 1441.6 |
+| 1536  | 0.42    |
+| 12288 | 3.08    |
+| 196608 | 52.72  |
 
 
 ## Performance Improvements
 
 The algorithm we use to extract all paths from the hierarchy graph produces duplicates. Changing this would improve performance.
-
-We can also improve performance by using only two loops in the **extract_paths** function. If we can append elements of the dataframe into the **paths** list, without looping over the rows, this would again improve performance.
