@@ -38,7 +38,7 @@ Finally, we use the output of **extract_paths** again, in order to store the edg
 
 ## Script Execution
 
-The script can be run from the command line, using the following 3 command line arguments:
+The script can be run from the command line, using the following 3 command line arguments, in order:
   1. **file_name**: the name of the Excel file to read 
   2. **db_name**: the name of the database that we will connect to
   3. **table_name**: the name of the table that we will create
