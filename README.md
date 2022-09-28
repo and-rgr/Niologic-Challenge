@@ -30,11 +30,11 @@ We make use of the following Python libraries
 
 ## Script Overview
 
-Most of the work is done in the **extract_paths** function. We loop over all column pairs, and over all rows of the given table. Since the table describes a hierarchy graph, this means that the pairs we extract this way will correspond to all the possible paths within the graph, including those of length zero. We then remove any duplicate lines from the list. The output of the function is a list, where each element is a list of length 2, containing the start point and endpoint of a path in the hierarchy graph.
+Most of the work is done in the **extract_paths** function. We loop over all column pairs of the given table. Since the table describes a hierarchy graph, this means that the pairs we extract this way will correspond to all the possible paths within the graph, including those of length zero. These are stored in the **paths** variable. We then use the **remove_duplicates** function to remove any duplicate lines from the list. The final output is a list, where each element is a list of length 2, containing the start point and endpoint of a path in the hierarchy graph.
 
-From there, we connect to the SQLite database, create a new Closure Table, and add a new row, for every pair in the output of the **extract_paths** function.
+From there, we connect to the SQLite database, create a new Closure Table, and add a new row, for every element in the **paths** variable.
 
-Finally, we use the output of **extract_paths** again, in order to store the edges and nodes of the hierarchy graph in a file, represented as SQL statements.
+Finally, we use the **paths** variable again, in order to store the edges and nodes of the hierarchy graph in a file, represented as SQL statements.
 
 ## Script Execution
 
